@@ -1,2 +1,2 @@
 # cpf-tools
-Uma ferramenta simples em Python para gerar e validar números de CPF. 
+Uma ferramenta simples em Python para gerar e validar números de CPF.
