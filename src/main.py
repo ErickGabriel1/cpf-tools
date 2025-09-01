@@ -30,16 +30,15 @@ def gerar_cpf():
     cpf.append(h2)
 
     #Retorna o valor do cpf gerado
-    return f'CPF: {cpf[0]}{cpf[1]}{cpf[2]}.{cpf[3]}{cpf[4]}{cpf[5]}.{cpf[6]}{cpf[7]}{cpf[8]}-{cpf[9]}{cpf[10]}'
+    return f'{cpf[0]}{cpf[1]}{cpf[2]}.{cpf[3]}{cpf[4]}{cpf[5]}.{cpf[6]}{cpf[7]}{cpf[8]}-{cpf[9]}{cpf[10]}'
 
 def verificar_cpf(cpf_str):
     
-    while True:
+    cpf = [int(d) for d in cpf_str if d.isdigit()]
 
-        cpf = [int(d) for d in cpf_str if d.isdigit()]
-
-        if len(cpf) != 11:
-            return "Formato inváido!"
+    if len(cpf) != 11:
+        return "Formato inváido!"
+            
 
 
     # Gera Dígito 1
