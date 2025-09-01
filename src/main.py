@@ -37,7 +37,7 @@ def verificar_cpf(cpf_str):
     cpf = [int(d) for d in cpf_str if d.isdigit()]
 
     if len(cpf) != 11:
-        return "Formato inváido!"
+        return "Formato inválido!"
             
 
 
@@ -47,6 +47,6 @@ def verificar_cpf(cpf_str):
     h2 = digit(10, 11, cpf)
 
     if cpf[9] == h1 and cpf[10] == h2:
-        return f'O CPF: {cpf[0]}{cpf[1]}{cpf[2]}.{cpf[3]}{cpf[4]}{cpf[5]}.{cpf[6]}{cpf[7]}{cpf[8]}-{cpf[9]}{cpf[10]} é válido!'
+        return f'CPF válido!'
     else:
-        return f'O CPF: {cpf[0]}{cpf[1]}{cpf[2]}.{cpf[3]}{cpf[4]}{cpf[5]}.{cpf[6]}{cpf[7]}{cpf[8]}-{cpf[9]}{cpf[10]} é inválido'
+        return f'CPF inválido'
