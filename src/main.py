@@ -38,6 +38,8 @@ def verificar_cpf(cpf_str):
 
     if len(cpf) != 11:
         return "Formato inválido!"
+    if len(set(cpf)) == 1:
+        return "CPF inválido!"
             
 
 

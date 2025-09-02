@@ -3,6 +3,11 @@ import flet as ft
 
 def app_main(page: ft.Page):
     
+    page.theme_mode = ft.ThemeMode.LIGHT
+    page.window.width = 400
+    page.window.height = 650
+    page.padding = ft.padding.only(top=20, left=20, right=20, bottom=20)
+
     def cpf_tool(e):
         if cpf_field.value == '':                 
             cpf_field.value = main.gerar_cpf()
@@ -27,6 +32,7 @@ def app_main(page: ft.Page):
         
 
     card = ft.Column(
+        width=400,
         controls=[
             ft.Row(
                 controls=[
