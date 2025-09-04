@@ -15,8 +15,8 @@ cpf-tools/
  ├─ LICENSE
  ├─ README.md
  └─ src/
-    ├─ app.py
-    └─ main.py
+  ├─ app.py
+  └─ main.py
 ```
 
 - `main.py` → contém as funções principais (geração e validação de CPF).  
@@ -25,6 +25,7 @@ cpf-tools/
 ## 🔧 Pré-requisitos
 
 - Python 3.10 ou superior instalado na sua máquina.  
+- [Fleet](https://fleet.run/) instalado para rodar o projeto.  
 - (Opcional) Criar um ambiente virtual:  
 
 ```bash
