@@ -1,5 +1,6 @@
 import main
 import flet as ft
+import time
 
 def app_main(page: ft.Page):
     
@@ -16,6 +17,10 @@ def app_main(page: ft.Page):
         else:
             cpf_field.value = main.verificar_cpf(f'{cpf_field.value}')
             page.update()
+            time.sleep(1)
+            cpf_field.value = ''
+            page.update()
+            update_icon(e)
     
     def update_icon(e):
         if cpf_field.value == '':
@@ -24,11 +29,11 @@ def app_main(page: ft.Page):
             add_button.icon = ft.Icons.CHECK
         page.update()
 
-    page.add(ft.Text(value='Gerador/Validador de CPF'))
+    page.add(ft.Text(value='Gerador/Validador de CPF', size=20))
     
     cpf_field = ft.TextField(hint_text='Digite um CPF...', on_change=update_icon)
 
-    add_button = ft.FloatingActionButton(icon=ft.Icons.ADD, on_click=cpf_tool)
+    add_button = ft.FloatingActionButton(icon=ft.Icons.ADD, on_click=cpf_tool, bgcolor=ft.Colors.INDIGO)
         
 
     card = ft.Column(
