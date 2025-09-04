@@ -4,9 +4,11 @@ import time
 
 def app_main(page: ft.Page):
     
-    page.theme_mode = ft.ThemeMode.LIGHT
-    page.window.width = 400
-    page.window.height = 650
+    page.padding = 0
+    page.theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN)
+    page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE)
+    page.window.width = 420
+    page.window.height = 420
     page.padding = ft.padding.only(top=20, left=20, right=20, bottom=20)
 
     def cpf_tool(e):
@@ -29,9 +31,9 @@ def app_main(page: ft.Page):
             add_button.icon = ft.Icons.CHECK
         page.update()
 
-    page.add(ft.Text(value='Gerador/Validador de CPF', size=20))
+    page.add(ft.Text(value='Gerador/Validador de CPF', text_align=ft.TextAlign.CENTER, width=300, size=20))
     
-    cpf_field = ft.TextField(hint_text='Digite um CPF...', on_change=update_icon)
+    cpf_field = ft.TextField(hint_text='Digite um CPF...', on_change=update_icon, border_radius=10)
 
     add_button = ft.FloatingActionButton(icon=ft.Icons.ADD, on_click=cpf_tool, bgcolor=ft.Colors.INDIGO)
         
