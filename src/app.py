@@ -5,8 +5,6 @@ import time
 def app_main(page: ft.Page):
     
     page.padding = 0
-    page.theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN)
-    page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE)
     page.window.width = 420
     page.window.height = 420
     page.padding = ft.padding.only(top=20, left=20, right=20, bottom=20)
